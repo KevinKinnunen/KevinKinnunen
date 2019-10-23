@@ -16,6 +16,7 @@
                 transform: translateY(-50%);
                 -ms-transform: translate(-50%);
                 transform: translateZ(-50%);
+                font-family: cursive;
                 
 
             }
@@ -36,7 +37,7 @@
             
             h1{
                 font-size: 33px;
-                box-shadow: 1px 5px 4px gray;
+                text-decoration: underline;
             }
             
 

@@ -1,13 +1,28 @@
 const { createServer } = require("http");
 const { createReadStream } = require("fs");
+const { decode } = require("querystring");
+//const { updateDb } = ("./myModule");
+
 var { mail } = require("./sendmail");
 
-const sendFile = function(response, status, type, filePath) {
-    response.writeHead(status, { "Content-Type": type});
+const sendFile = function (response, status, type, filePath) {
+    response.writeHead(status, { "Content-Type": type });
     createReadStream(filePath).pipe(response);
 };
 
-createServer(function(request, response) {
+createServer(function (request, response) {
+    if (request.method === "POST") {
+        let body = "";
+        request.on("data", function (data) {
+            body += data;
+        });
+        request.on("end", function () {
+            const { fname, lname } = decode(body);
+            console.log(body);
+            //updateDb(email, name, message);
+            console.log(`fname: ${fname}, lname: ${lname}`);
+        });
+    }
 
     switch (request.url) {
         case "/":
@@ -16,8 +31,10 @@ createServer(function(request, response) {
             return sendFile(response, 200, "text/css", "./client/style.css");
         case "/kris.jpg":
             return sendFile(response, 200, "image/jpeg", "./client/kris.jpg");
-        default: 
-            return; 
+        case "/form":
+            return sendFile(response, 200, "text/html", "./client/form.html");
+        default:
+            return;
     }
 }).listen(8080);
 
