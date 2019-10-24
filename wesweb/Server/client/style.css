@@ -9,7 +9,6 @@
                 border-radius: 50%;
                 box-shadow: 0px 8px 4px gray;
                 margin: 0;
-                position: absolute;
                 top: 40%;
                 left:40%;
                 -ms-transform: translateY(-50%);
@@ -17,6 +16,12 @@
                 -ms-transform: translate(-50%);
                 transform: translateZ(-50%);
                 font-family: cursive;
+                animation-name: animatedbox;
+                animation-duration: 4s;
+                animation: animatedbox 10s 2;
+                animation-direction: alternate;
+                animation-iteration-count: infinite;
+                position: relative;
                 
 
             }
@@ -40,6 +45,35 @@
                 text-decoration: underline;
             }
             
-
+            @keyframes animatedbox {
+                0% {
+                    background: red;
+                    left: 0px;
+                    top: 200px;
+                }
+    
+                25% {
+                    background: yellow;
+                    left: 500px;
+                    top: 200px;
+                }
+    
+                50% {
+                    background: pink;
+                    left: 500px;
+                    top: 500px;
+                }
+    
+                75% {
+                    background: green;
+                    left: 800px;
+                    top: 500px;
+                }
+    
+                100% {
+                    background: red;
+                    left: 1000px;
+                    top: 200px;
+                }
             
     

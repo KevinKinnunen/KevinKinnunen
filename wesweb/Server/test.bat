@@ -1,0 +1,2 @@
+echo HEJ!
+pause

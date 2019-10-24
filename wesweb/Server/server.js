@@ -4,6 +4,7 @@ const { decode } = require("querystring");
 //const { updateDb } = ("./myModule");
 
 var { mail } = require("./sendmail");
+var mongo = require('mongodb');
 
 const sendFile = function (response, status, type, filePath) {
     response.writeHead(status, { "Content-Type": type });
@@ -33,8 +34,10 @@ createServer(function (request, response) {
             return sendFile(response, 200, "image/jpeg", "./client/kris.jpg");
         case "/form":
             return sendFile(response, 200, "text/html", "./client/form.html");
+        case "/download":
+            return sendFile(response, 200, "text/bat", "./server/test.bat"); //Funkar Ej pga fil format tror jag(bat).
         default:
-            return;
+            return sendFile(response, 200, "text/html", "./client/404.html");
     }
 }).listen(8080);
 
