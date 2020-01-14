@@ -1,10 +1,9 @@
 const { createServer } = require("http");
 const { createReadStream } = require("fs");
 const { decode } = require("querystring");
-//const { updateDb } = ("./myModule");
+const { updateDb } = ("./myModule");
 
 var { mail } = require("./sendmail");
-var mongo = require('mongodb');
 
 const sendFile = function (response, status, type, filePath) {
     response.writeHead(status, { "Content-Type": type });
@@ -20,7 +19,7 @@ createServer(function (request, response) {
         request.on("end", function () {
             const { fname, lname } = decode(body);
             console.log(body);
-            //updateDb(email, name, message);
+            updateDb(fname, lname);
             console.log(`fname: ${fname}, lname: ${lname}`);
         });
     }
