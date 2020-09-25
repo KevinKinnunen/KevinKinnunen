@@ -1,20 +1,7 @@
-$primaryBtn: rgb(143, 15, 15);
-$textColor: rgb(58,42,50,50);
+@import "./variables";
+@import "./header";
 
-header {
-    background: $primaryBtn;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-}
-
-header button{
-    background: $primaryBtn;
-}
-
-.contact button {
-    background: $primaryBtn;
+.contact {
+    @include flexCenter(row, blue);
+    width: 100% - 30%;
 }
