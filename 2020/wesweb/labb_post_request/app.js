@@ -7,10 +7,8 @@ const app = express()
 const port = 3000
 const clientDir = __dirname + '\\client\\'
 
-const bodyParser = require('body-parser')
-const { response } = require('express')
-
-app.use(bodyParser())
+app.use(express.json())
+app.use(express.request())
 
 app.get('/', (req, res) => res.sendFile(clientDir + 'index.html'))
 app.get('/style', (req, res) => res.sendFile(clientDir + 'style.css'))

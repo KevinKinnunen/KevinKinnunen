@@ -1,29 +1,36 @@
-// npm init -y
-// npm i express mongoose
-// npm i --save-dev nodemon
+const express = require('express')
+const databaseModule = require('./databaseModule')
+const app = express()
+const port = 3000
 
-// getting-started.js
-const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/test', {useNewUrlParser: true});
+const clientDir = __dirname + "\\client\\"
 
-const db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', function() {
-  // we're connected!
-});
+app.use(express.json())
+app.use(express.urlencoded())
 
-const userSchema = new mongoose.Schema({
-    name: String,
-    email: String,
-    age: Number
-  });
-  
-  const user = mongoose.model('Users', userSchema);  
+app.get('/', (req, res) => {
+  res.sendFile(clientDir + "index.html")
+})
 
-  var Kevin = new user({name: 'Kevin', email: 'k@k.k', age: 18})
-  var Amanda = new user({name: 'Amanda', email: 'a@a.a', age: 17})
-  var Jesper = new user({name: 'Jesper', email: 'j@j.j', age: 19})
+app.get('/style', (req, res) => {
+  res.sendFile(clientDir + "style.css")
+})
 
-  Kevin.save()
-  Amanda.save()
+app.get('/jesus', (req, res) => {
+  res.sendFile(clientDir + "download.jpg")
+})
+
+app.post('/', (req, res) => {
+  console.log(req.body.name)
+  console.log(req.body.email)
+
+  databaseModule.storePerson(req.body.name, req.body.email, req.body.age)
+
+  res.redirect('/')
+})
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}!`)
+}) 
+anda.save()
   Jesper.save()
