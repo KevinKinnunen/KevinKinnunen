@@ -1,5 +1,5 @@
 header {
-  height: 100vh;
+  height: 10vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -13,20 +13,12 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: red;
+  background: gray;
   color: #2fcece;
 }
 
-header button {
-  background: #8f130f;
-}
-
-header button:after {
-  content: 'gellooo';
-}
-
 .contact {
-  height: 100vh;
+  height: 10vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -41,6 +33,6 @@ header button:after {
       -ms-flex-direction: row;
           flex-direction: row;
   background: blue;
-  width: 70%;
+  width: 100%;
 }
 /*# sourceMappingURL=style.css.map */
