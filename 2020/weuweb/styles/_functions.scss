@@ -7,3 +7,11 @@
     flex-direction: $direction;
     background: $background;
 }
+
+@mixin mainboxSettings {
+    height: 50vh;
+}
+
+@mixin changeColor ($boxcolors) {
+    background-color: $boxcolors;
+}

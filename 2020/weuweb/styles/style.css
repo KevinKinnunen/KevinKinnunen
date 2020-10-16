@@ -17,6 +17,16 @@ header {
   color: #2fcece;
 }
 
+.main-boxes .box-one {
+  height: 50vh;
+  background-color: red;
+}
+
+.main-boxes .box-two {
+  height: 50vh;
+  background-color: #ff9924;
+}
+
 .contact {
   height: 10vh;
   display: -webkit-box;

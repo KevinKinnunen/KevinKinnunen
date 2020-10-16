@@ -11,10 +11,12 @@ header {
 
 .main-boxes{
     .box-one{
-
+        @include mainboxSettings;
+        @include changeColor($boxOne);
     }   
     .box-two{
-    
+        @include mainboxSettings;
+        @include changeColor($boxTwo);
     }
 }
 
