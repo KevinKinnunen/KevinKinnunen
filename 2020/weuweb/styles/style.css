@@ -1,5 +1,4 @@
 header {
-  height: 10vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -13,22 +12,35 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: gray;
+  background: black;
   color: #2fcece;
 }
 
 .main-boxes .box-one {
   height: 50vh;
-  background-color: red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background: orange;
 }
 
 .main-boxes .box-two {
   height: 50vh;
-  background-color: #ff9924;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background: #b9175a;
 }
 
 .contact {
-  height: 10vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

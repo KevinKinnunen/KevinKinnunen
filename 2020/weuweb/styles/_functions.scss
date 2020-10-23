@@ -1,5 +1,4 @@
 @mixin flexCenter($direction, $background) {
-    height: 10vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,6 +11,8 @@
     height: 50vh;
 }
 
-@mixin changeColor ($boxcolors) {
-    background-color: $boxcolors;
+@mixin DirectionBackground($direction, $background) {
+    display: flex;
+    flex-direction: $direction;
+    background: $background;
 }

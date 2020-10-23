@@ -1,5 +1,5 @@
-let gissatalet = 5
-let randint = Math.floor(Math.random() * 10) + 1; //1 - 10
+let gissatalet = 5 //5 försök.
+let randint = Math.floor(Math.random() * 10) + 1; //1 - 10.
 
 const readline = require('readline');
 
@@ -11,20 +11,20 @@ const rl = readline.createInterface({
 rl.on('line', (input) => {
     let ninput = parseInt(input)
 
-    if (ninput < randint){
+    if (ninput < randint){ //Lägre
         console.log("Gissa på ett högre tal!");
     }
-    else if (ninput > randint){
+    else if (ninput > randint){ //Högre
         console.log("Gissa på ett lägre tal!");
-    } else if (ninput == randint){
+    } else if (ninput == randint){ //Lika 
         console.log("Haha du vann!");
-        process.exit()
+        process.exit() //Exit ifall du gissar rätt.
     }
-gissatalet--; //5 gissningar max för att vinna annars, process.exit.
+gissatalet--; //-1 per försök.
 if (gissatalet == 0)
 {
     console.log("YOU SUCK! :D");
-    process.exit()
+    process.exit() //exit efter 5 försök.
 }
   });
 

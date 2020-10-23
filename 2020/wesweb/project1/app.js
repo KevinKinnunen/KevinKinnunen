@@ -32,7 +32,7 @@ app.get('/style', (req, res) => {
 app.post('/', (req, res) => {
   console.log(req.body.name)
   console.log(req.body.email)
-  let person = personModule.newPerson(req.body.name, req.body.email, req.body.age)
+  let person = personModule.newPerson(req.body.name, req.body.email, req.body.age, req.body.comment)
   databaseModule.storeModel(person)
   names.push(req.body.name)
   res.render("pages/index.ejs", {nameList: names})

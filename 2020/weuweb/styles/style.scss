@@ -4,19 +4,19 @@
 
 header {
 
-    @include flexCenter(column, gray);
+    @include flexCenter(column,black);
     color: $textColor;
-
 }
 
 .main-boxes{
+    @include flexCenter();
     .box-one{
         @include mainboxSettings;
-        @include changeColor($boxOne);
+        @include DirectionBackground(row, orange);
     }   
     .box-two{
         @include mainboxSettings;
-        @include changeColor($boxTwo);
+        @include DirectionBackground(row, rgb(185, 23, 90));
     }
 }
 
