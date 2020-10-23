@@ -25,16 +25,12 @@ app.get('/', (req, res) => {
   res.render("pages/index.ejs", {nameList: names})
 })
 
-app.get('/style', (req, res) => {
-  res.sendFile(clientDir + "style.css")
-})
-
 app.post('/', (req, res) => {
   console.log(req.body.name)
   console.log(req.body.email)
   let person = personModule.newPerson(req.body.name, req.body.email, req.body.age, req.body.comment)
   databaseModule.storeModel(person)
-  names.push(req.body.name)
+  names.push(req.body.name, req.body.comment)
   res.render("pages/index.ejs", {nameList: names})
 })
 
