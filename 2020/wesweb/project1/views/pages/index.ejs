@@ -8,15 +8,15 @@
 </head>
 <body>
     <h1>Hello!</h1>
-    <form action="/" method="post" id="usrform">
+    <form action="/" method="post">
         <input type="text" name="name" placeholder="Namn">
         <input type="email" name="email" placeholder="example@email.com">
         <input type="number" name="age" placeholder="33">
-        <input type="text" name="usrform">
+        <textarea name="comment">Enter text here...</textarea>
         <button type="submit">Okej</button>
     </form>
 
-    <textarea name="comment" form="usrform">Enter text here...</textarea>
+    
 
     <% for( let i = 0; i < nameList.length; i++ ) { %>
         <p><%- nameList[i] %> </p>
