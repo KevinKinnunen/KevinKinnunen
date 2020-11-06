@@ -5,6 +5,30 @@ const rl = readline.createInterface({
     output: process.stdout
 });
 
+function getDiceSides(line){
+    let numText = line.split(' ')
+    let diceOne = (Number(numText[1]) - Number(numText[0]) + 1)
+    let diceTwo = (Number(numText[3]) - Number(numText[2]) + 1)
+
+    let diceSides = diceOne + diceTwo
+    return diceSides
+}
+
+function calculateAvg(sides){
+    let avg = sides / 2
+    return avg
+}
+
+function printResultProbability(playerOneAvg, playerTwoAvg){
+    if(playerOneAvg > playerTwoAvg){
+        console.log("Gunnar has the highest probability of winning!")
+    } else if (playerTwoAvg > playerOneAvg) {
+        console.log("Emma has the highest probability of winning!")
+    } else {
+        console.log("TIE! :D")
+    }
+}
+
 var lineInputs = 0
 const lines = []
 
@@ -13,26 +37,14 @@ rl.on('line', (input) => {
     lines.push(input)
 
     if (lineInputs == 2) {
-        let gunnar = lines[0]
-        let emma = lines[1]
+        let gunnarDice = getDiceSides(lines[0])
+        let emmaDice = getDiceSides(lines[1])
+        let gunnarAvg = calculateAvg(gunnarDice)
+        let emmaAvg = calculateAvg(emmaDice)
 
-        gunnarDiceOne = (Number(gunnar.split(' ')[1]) + Number(gunnar.split(' ')[4])) / 2
-        gunnarDiceTwo = (Number(gunnar.split(' ')[2]) + Number(gunnar.split(' ')[6])) / 2
-
-        emmaDiceOne = (Number(emma.split(' ')[2]) + Number(emma.split(' ')[5])) / 2
-        emmaDiceTwo = (Number(emma.split(' ')[1]) + Number(emma.split(' ')[7])) / 2
-
-
-
-        if (gunnar > emma) {
-            console.log("Gunnar is champ")
+        printResultProbability(gunnarAvg, emmaAvg)
+        for (let index = 0; index < 2; index++) {
+            lines.shift()    
         }
-        else if (gunnar < emma) {
-            console.log("Emma comes out victorius")
-        }
-        else {
-            console.log("TIE, SAY GOODBYE")
-        };
-
     }
 });
