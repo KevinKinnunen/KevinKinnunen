@@ -1,56 +1,6 @@
-//Random ord som ska användas till hängagubbe (50 ord).
-let randWordlist = [
-    "landscape",
-    "hand",
-    "royalty",
-    "illustrate",
-    "man",
-    "defeat",
-    "auction",
-    "sheep",
-    "unrest",
-    "popular",
-    "doubt",
-    "jet",
-    "reflect",
-    "form",
-    "glass",
-    "constituency",
-    "boy",
-    "cake",
-    "lunch",
-    "duke",
-    "liberal",
-    "confuse",
-    "frank",
-    "car",
-    "asylum",
-    "kit",
-    "decoration",
-    "faithful",    
-    "latest",
-    "printer",
-    "swell",
-    "structure",
-    "valid",
-    "space",
-    "opposite",
-    "flag",
-    "dignity",
-    "fantasy",
-    "sweet",
-    "variety",
-    "mood",
-    "clothes",
-    "pursuit",
-    "headquarters",
-    "consciousness",
-    "leg",
-    "responsibility",
-    "dictate",
-    "circulation",
-    "gloom"
-];
-//Slumpa ett av orden i ordlistan.
-let randWord = randWordlist[Math.floor(Math.random() * randWordlist.length)];
-console.log(randWord)
+const functions = require('./functions')
+
+let easyRandWord = functions.randomWordFunc("easy")
+let hardRandWord = functions.randomWordFunc("hard")
+
+console.log("Easy: " + easyRandWord + "\n" + "Hard: " + hardRandWord);
