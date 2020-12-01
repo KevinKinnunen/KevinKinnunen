@@ -1,4 +1,4 @@
-//Random ord som ska användas till hängagubbe. (50 ord)
+//Random ord som ska användas till hängagubbe (50 ord).
 let randWordlist = [
     "landscape",
     "hand",
@@ -51,6 +51,6 @@ let randWordlist = [
     "circulation",
     "gloom"
 ];
-//Slumpa ett av orden i ordlistan och spara ordet till senare.
+//Slumpa ett av orden i ordlistan.
 let randWord = randWordlist[Math.floor(Math.random() * randWordlist.length)];
 console.log(randWord)

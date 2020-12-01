@@ -10,7 +10,13 @@ Jag tänkte även på att använda ejs för att blanda javascript med html.
 Jag kommer använda mig utav olika funktioner som gör jobbet åt mig och som jag kommer kunna använda igen enklare, ett exempel på detta är att slumpa alla ord så att det blir olika varenda gång. 
 
 ### Hur funkar spelet?
-1. Spelaren får ett ord och hur får veta hur många bokstäver ordet har.
-2. Spelaren ska chansa på en bokstav som spelaren tror att ordet består utav.
-3. Ifall spelaren har rätt så sparas bokstaven och ifall spelaren har fel så får de 1 mindre försök och det skrivs även ut en del av tekniken som kommer ritas samt så kommer bokstaven som var fel sparas.
-4. Ifall spelaren chansar rätt på alla bokstäver utan att gubben hängs så vinner spelaren annars tvärtom. 
+1. Spelaren får ett ord slumpmässigt av en lista.och hur får veta hur många bokstäver ordet har.
+2. Spelaren får veta hur många ord det slumpmässiga ordet består utav.
+3. Spelaren kommer få chansa på bokstäver. 
+    Ifall det är:
+    fel- bokstäven sparas så att spelaren kan se att bokstäven var fel och spelaren kan fortsätta gissa på bokstäver.
+    (1 mindre försök per fel och en "kroppsdel" kommer ritas ut antagligen via en html sida)
+
+    rätt- bokstäven sparas och visas i rätt ordning i ordet.
+4. 
+5. Ifall spelaren chansar rätt på alla bokstäver utan att gubben hängs så vinner spelaren annars tvärtom. 
