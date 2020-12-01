@@ -10,7 +10,7 @@ Jag tänkte även på att använda ejs för att blanda javascript med html.
 Jag kommer använda mig utav olika funktioner som gör jobbet åt mig och som jag kommer kunna använda igen enklare, ett exempel på detta är att slumpa alla ord så att det blir olika varenda gång. 
 
 ### Hur funkar spelet?
-1. Spelaren får ett ord slumpmässigt av en lista.och hur får veta hur många bokstäver ordet har.
+1. Spelaren får ett ord slumpmässigt av en lista. 
 2. Spelaren får veta hur många ord det slumpmässiga ordet består utav.
 3. Spelaren kommer få chansa på bokstäver. 
     Ifall det är:
