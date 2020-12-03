@@ -11,8 +11,8 @@ Jag kommer använda mig utav olika funktioner som gör jobbet åt mig och som ja
 Svårighetsgraden av hängagubbe kommer bestå av en difficulty parameter som kommer avgöra vilken svårighetsgrad det kommer vara. Desto enklare desto mindre samt vanligare ord. 
 
 ### Hur funkar spelet?
-1. Spelaren får ett ord slumpmässigt av en lista. 
-2. Spelaren får veta hur många ord det slumpmässiga ordet består utav.
+1. Spelaren får ett ord slumpmässigt av en lista. //Klar.
+2. Spelaren får veta hur många ord det slumpmässiga ordet består utav. //Klar.
 3. Spelaren kommer få chansa på bokstäver. 
     Ifall det är:
     fel- bokstäven sparas så att spelaren kan se att bokstäven var fel och spelaren kan fortsätta gissa på bokstäver.

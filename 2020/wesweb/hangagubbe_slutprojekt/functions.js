@@ -12,6 +12,7 @@ const easyWordList = [
     "sweet",
     "flag",
     "swell",
+    "glass",
 ];
 
 const hardWordList = [
@@ -25,7 +26,6 @@ const hardWordList = [
     "jet",
     "reflect",
     "form",
-    "glass",
     "constituency",
     "duke",
     "liberal",
