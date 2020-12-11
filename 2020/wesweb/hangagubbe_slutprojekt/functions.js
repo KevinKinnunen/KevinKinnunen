@@ -64,3 +64,4 @@ exports.randomWordFunc = (difficulty) => {
         return randomWord;
     }
 }
+
