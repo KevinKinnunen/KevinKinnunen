@@ -19,3 +19,23 @@ Svårighetsgraden av hängagubbe kommer bestå av en difficulty parameter som ko
     (1 mindre försök per fel och en "kroppsdel" kommer ritas ut antagligen via en html sida).
     rätt-  bokstaven sparas och visas i rätt ordning i ordet. //Klar
 4. Ifall spelaren chansar rätt på alla bokstäver utan att gubben hängs så vinner spelaren annars tvärtom. //Klar. 
+
+### Tydligare svar på frågor angående koden.
+1. Vilken extra funktionalitet har du tänkt implementera?
+    -Jag har redan implementerat en funktion som slumpar orden beroende på vad du valde för nivå (easy / hard).
+    Jag har implanterat en setupGame funktion som startar om spelet samt startar om dina försök. 
+    Jag har även en funktion som ger statusen av spelet, alltså ifall du fått ett bokstav rätt / fel samt hur många försök du har kvar innan du förlorar.
+2. Vilka variabler behöver du och till vilket syfte? Här vill jag ha med variabelnamn, datatyp och en förklaring på vad variabeln är till för - på varje variabel.
+    -Två const variabler för de olika svårighetsgraderna. ¨
+    Tre variabler(RandomWord, word, tries)
+    En RandomWordindex variabel för att räkna ut ifall bokstaven finns i ordet eller inte.
+3. Vilka olika konstrollstrukturer behövs och till vilket syfte? (Loopar, villkor, etc.) Var så detaljerad som möjligt.
+    -Jag använder mig utav vilkor exempel ifall variabel == variabel så ska de göra något osv.
+4. Vilken funktionalitet kan (och borde) du skapa funktioner av? Här vill jag ha funktionsnamn, returtyp, eventuella parametrar samt vad funktionen ska göra.
+    -Jag har redan gjort funktioner som är behövande enligt mig i koden för att förenkla samt göra en bra struktur. 
+5. Vilka variabler behöver vara åtkomliga inom hela klassen?
+    -let RandomWord = "";
+    let word = "";
+    let tries = 7; 
+    samt behöves funktioner ifrån functions.js så de inkluderas i main
+    const functions = require("./functions"); 
