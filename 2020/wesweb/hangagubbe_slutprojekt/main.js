@@ -18,11 +18,11 @@ function setupGame() {
       //If answer is easy.
       RandomWord = functions.randomWordFunc("easy"); //Taking a word from easy arraylist.
       console.log("The length of the word is: " + RandomWord.length); //Counting the length of the word.
-      console.log("Easy level: " + RandomWord);
-    } else if (answer == "hard") {
+      //console.log("Easy level! "); //+ RandomWord
+    } else if (answer == "hard") { 
       RandomWord = functions.randomWordFunc("hard");
       console.log("The length of the word is: " + RandomWord.length);
-      console.log("Hard level: " + RandomWord);
+      //console.log("Hard level! ");//+ RandomWord
     }
     else
     {
@@ -39,10 +39,10 @@ function statusOfGame(input) {
   let RandomWordindex = RandomWord.indexOf(input); //If indexOf input is != -1 it exist in the choosen word, else its not.
   if (RandomWordindex != -1) {
     //If not equals -1 (letter exist in the word)
-    console.log("\x1b[33m%s\x1b[0m", "Ooo nice! :D " + RandomWordindex);
-    word += input; //Saving the letter into the variable word.  ################################################################ reason why program crash.
+    console.log("\x1b[33m%s\x1b[0m", "Ooo nice! :D ");
+    word += input; //Saving the letter into the variable word.
   } else {
-    console.log("\x1b[31m%s\x1b[0m", "Wrong letter! " + RandomWordindex);
+    console.log("\x1b[31m%s\x1b[0m", "Wrong letter! ");
     --tries; //If letter doesn't exist in the word, -1 try out of 8.
   }
 
@@ -56,86 +56,112 @@ function statusOfGame(input) {
     );
     setupGame();
   } else if (tries == 7) {
-    console.log("=========''', '''")
-    console.log("+---+");
-    console.log("|   |");
-    console.log("    |");
-    console.log("    |");
-    console.log("    |");
-    console.log("    |");
-    console.log("=========''']");
+    
+    console.log(
+      `
+    +---+
+    |   |
+        |
+        |
+        |
+        |
+  =========''', ''' 
+      `
+    )
+
     console.log("Let's go champ!:D\n");
     ("Status: 7 tries left!\n")
   } else if (tries == 6) {
-    console.log("=========''', '''")
-    console.log("+---+");
-    console.log("|   |");
-    console.log("O   |");
-    console.log("    |");
-    console.log("    |");
-    console.log("    |");
-    console.log("=========''']");
+    console.log(
+      `
+      +---+
+      |   |
+      O   |
+          |
+          |
+          |
+    =========''', '''
+      `
+    )
     console.log("Status: 6 tries left!\n");
   } else if (tries == 5) {
-    console.log("=========''', '''")
-    console.log("+---+");
-    console.log("|   |");
-    console.log("O   |");
-    console.log("|   |");
-    console.log("    |");
-    console.log("    |");
-    console.log("=========''']");
+    console.log(
+      `
+      +---+
+      |   |
+      O   |
+      |   |
+          |
+          |
+    =========''', '''
+      `
+    )
     console.log("Status: 5 tries left!\n");
   } else if (tries == 4) {
-    console.log("=========''', '''")
-    console.log(" +---+");
-    console.log(" |   |");
-    console.log(" O   |");
-    console.log("/|   |");
-    console.log("     |");
-    console.log("     |");
-    console.log("=========''']");
+    console.log(
+      `
+      +---+
+      |   |
+      O   |
+     /|   |
+          |
+          |
+    =========''', '''
+      `
+    )
     console.log("Status: 4 tries left!\n");
   } else if (tries == 3) {
-    console.log("=========''', '''")
-    console.log(" +---+");
-    console.log(" |   |");
-    console.log(" O   |");
-    console.log("/|\\  |");
-    console.log("     |");
-    console.log("     |");
-    console.log("=========''']");
+    console.log(
+      `
+      +---+
+      |   |
+      O   |
+     /|\\  |
+          |
+          |
+    =========''', '''
+      `
+    )
     console.log("Status: 3 tries left!\n");
   } else if (tries == 2) {
-    console.log("=========''', '''")
-    console.log(" +---+");
-    console.log(" |   |");
-    console.log(" O   |");
-    console.log("/|\\  |");
-    console.log("/     |");
-    console.log("     |");
-    console.log("=========''']");
+    console.log(
+      `
+      +---+
+      |   |
+      O   |
+     /|\\  |
+     /    |
+          |
+    =========''', '''
+      `
+    )
     console.log("Status: 2 tries left!\n");
   } else if (tries == 1) {
-    console.log("=========''', '''")
-    console.log(" +---+");
-    console.log(" |   |");
-    console.log(" O   |");
-    console.log("/|\\  |");
-    console.log("/ \\  |");
-    console.log("     |");
-    console.log("=========''']");
+    console.log(
+      `
+      +---+
+      |   |
+      O   |
+     /|\\  |
+     / \\  |
+          |
+    =========''']
+      `
+    )
     console.log("Status: 1 tries left!\n");
   } else if (tries == 0) {
       //If you've guessed too many times, you lose and game will start over with a new word.
-    console.log("=========''', '''")
-    console.log("+---+");
-    console.log(" |   |");
-    console.log(" O   |");
-    console.log("/|\\  |");
-    console.log("/ \\  |");
-    console.log("     |");
-    console.log("=========''']");
+    console.log(
+      `
+      +---+
+      |   |
+      O   |
+     /|\\  |
+     / \\  |
+          |
+    =========''']
+      `
+    )
     console.log("\x1b[31m%s\x1b[0m", "GAMEOVER!\n",
     "The game will now reset! :D\n")
     setupGame();
@@ -143,6 +169,6 @@ function statusOfGame(input) {
 }
 
 rl.on("line", (input) => {
-  console.log(`Received: ${input}`); //Receiving all the letters which is being entered.
+  console.log(`Received the letter: ${input}`); //Receiving all the letters which is being entered.
   statusOfGame(input); //Calling statusOfGame function.
 });
