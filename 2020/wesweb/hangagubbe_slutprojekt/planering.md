@@ -11,7 +11,8 @@
 - Jag tänkte också använda mig utav en index som visar alla ord man använt i en slags box, de som man hade rätt på och de som man hade fel på så det är tydligt för spelaren.
 - Jag tänkte även på att använda ejs för att blanda javascript med html.
 - Jag kommer använda mig utav olika funktioner som gör jobbet åt mig och som jag kommer kunna använda igen enklare, ett exempel på detta är att slumpa alla ord så att det blir olika varenda gång. 
-- Svårighetsgraden av hängagubbe kommer bestå av en difficulty parameter som kommer avgöra vilken svårighetsgrad det kommer vara. Desto enklare desto mindre samt vanligare ord. 
+- Svårighetsgraden av hängagubbe kommer bestå av en difficulty parameter som kommer avgöra vilken svårighetsgrad det kommer vara. Desto enklare desto mindre samt vanligare ord.
+- Jag la till en array som består utav alla felgissningar som du gör genom att pusha bokstäverna som är fel och därefter när du förlorat tömmer jag arrayn av allt ifrån förra spelet som spelaren spelade.
 +-+-+
 !Hur funkar spelet?
 +-+-+
@@ -41,7 +42,7 @@
 - 5. Vilka variabler behöver vara åtkomliga inom hela klassen?
 -    let RandomWord = "";
 -    let word = "";
--    let tries = 7; 
+-    let tries = 7;                                                                         
 -    samt behöves funktioner ifrån functions.js så de inkluderas i main
 -    const functions = require("./functions"); 
 +-+-+
