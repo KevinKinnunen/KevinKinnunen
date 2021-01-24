@@ -34,7 +34,7 @@ const hardWordList = [
     "asylum",
     "kit",
     "decoration",
-    "faithful",    
+    "faithful",
     "latest",
     "printer",
     "structure",

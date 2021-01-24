@@ -8,21 +8,27 @@ const rl = readline.createInterface({
 });
 
 //Two different variables for easy & hard wordlists.
+const progress = [];
+const wrongGuesses = [];
 let RandomWord = "";
 let word = "";
 let tries = 7; //Tries
 function setupGame() {
+  progress.slice(0, progress.length) //Cleaning array
   rl.question("What level do you choose? (easy / hard): ", (answer) => {
     //2 levels which you can play in.
     if (answer == "easy") {
       //If answer is easy.
       RandomWord = functions.randomWordFunc("easy"); //Taking a word from easy arraylist.
+      for (let i = 0; i < RandomWord.length; i++) {
+        progress.push("_")
+      }
       console.log("The length of the word is: " + RandomWord.length); //Counting the length of the word.
-      //console.log("Easy level! + RandomWord "); //+ RandomWord
+      console.log("Easy level!  "+ RandomWord); //+ RandomWord
     } else if (answer == "hard") { 
       RandomWord = functions.randomWordFunc("hard");
       console.log("The length of the word is: " + RandomWord.length);
-      //console.log("Hard level! + RandomWord "); //+ RandomWord
+      //console.log("Hard level! "+ RandomWord); //+ RandomWord
     }
     else
     {
@@ -34,13 +40,19 @@ function setupGame() {
 }
 
 setupGame(); //Calling setupGame function.
-let wrongGuesses = [];
 
 function statusOfGame(input) {
+  wrongGuesses.slice(0, progress.length) //Cleaning array
   let RandomWordindex = RandomWord.indexOf(input); //If indexOf input is != -1 it exist in the choosen word, else its not.
+
   if (RandomWordindex != -1) {
     //If not equals -1 (letter exist in the word)
-    
+    for (let i = 0; i < RandomWord.length; i++) {
+      if (input === RandomWord[i]){
+        progress[i] = input
+      }
+    }
+    console.log(progress.join(""))
     console.log("\x1b[33m%s\x1b[0m", "Ooo nice! :D ");
     word += input; //Saving the letter into the variable word.
   } else {
@@ -169,11 +181,11 @@ function statusOfGame(input) {
      / \\  |
           |
     =========''']
+    You suck!
       `
     )
     console.log("\x1b[31m%s\x1b[0m", "GAMEOVER!\n",
     "The game will now reset! :D\n")
-    wrongGuesses = [];
     setupGame();
   }
 }
