@@ -1,5 +1,5 @@
 ## Hi there 👋
-[![My Skills](https://skillicons.dev/icons?i=cs,css,dotnet,git,github,html,mongodb,mysql,)](https://skillicons.dev)
+
 <!--
 **KevinKinnunen/KevinKinnunen** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
